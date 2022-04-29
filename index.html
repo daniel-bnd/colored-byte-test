@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Colored Byte</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img
+          class="avatar"
+          src="/assets/png/Ellipse 1.png"
+          alt="Avatar picture"
+        />
+        <div class="user">
+          <div class="name">Erik Dunlop</div>
+          <div class="location">San Francisco, California</div>
+        </div>
+      </header>
+
+      <section id="slider-container">
+        <div class="swiper">
+          <div class="swiper-wrapper" id="swiper-wrapper"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="container">
+        <section id="interactions-container">
+          <img
+            id="like-icon"
+            class="like-icon"
+            src="assets/svg/like.svg"
+            alt="Like icon"
+            onclick="handleLike()"
+          />
+          <img
+            class="comment-icon"
+            src="assets/svg/comment.svg"
+            alt="Comment icon"
+          />
+          <img class="share-icon" src="assets/svg/share.svg" alt="Share icon" />
+        </section>
+
+        <section id="comments-container">
+          <p class="comment">
+            <span>Lucas Credie</span> dolor sit amet, consectetur adipiscing
+            elit. Mi enim ut eu cras ultrices eget et tristique proin. Mi enim
+            ut eu cras ultrices eget et tristique proin.
+          </p>
+          <p class="comment">
+            <span>Comment</span> consectetur adipiscing elit. Mi enim ut eu cras
+            ultrices eget et
+          </p>
+        </section>
+
+        <form id="post-comment-container">
+          <input
+            id="input-comment"
+            type="text"
+            name="comment-value"
+            placeholder="Add a comment..."
+          />
+          <button id="btn" type="submit" onclick="addComment('User')">
+            Post
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="scripts/swiper.js"></script>
+    <script src="scripts/interactions.js"></script>
+  </body>
+</html>

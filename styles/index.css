@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: Inter, Helvetica, sans-serif;
+}
+
+main {
+  width: 527px;
+  min-height: 739px;
+  background: #fcfcfc;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  box-shadow: -1px 7px 8px -5px rgba(0, 0, 0, 0.14);
+  border-radius: 5px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 75px;
+  padding-left: 25px;
+}
+.user {
+  margin-left: 25px;
+}
+.name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+.location {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 9px;
+}
+
+#slider-container {
+  width: 100%;
+  height: 325px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 337px;
+  padding: 18px 25px 92px 25px;
+}
+
+#interactions-container {
+  display: flex;
+  flex-direction: row;
+}
+.like-icon-active {
+  animation: likeAnimation 0.3s ease-in-out;
+}
+.like-icon:hover,
+.like-icon-active:hover {
+  cursor: pointer;
+}
+.comment-icon {
+  margin: 0 12px;
+}
+
+#comments-container {
+  margin-top: 28px;
+}
+.comment {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 22px;
+}
+.comment > span {
+  font-weight: 600;
+}
+
+#post-comment-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 25px;
+  width: 477px;
+  height: 55px;
+  padding: 0 15px;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+#input-comment {
+  width: 100%;
+  height: 80%;
+  background: none;
+  border: none;
+  outline: none;
+  font: 400 12px/15px Inter, Helvetica, sans-serif;
+}
+#btn {
+  width: 39px;
+  height: 15px;
+  font: 700 12px/15px Inter, Helvetica, sans-serif;
+  border: none;
+  color: #3d8aff;
+}
+#btn:hover {
+  cursor: pointer;
+}
+
+@keyframes likeAnimation {
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
